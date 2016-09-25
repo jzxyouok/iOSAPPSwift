@@ -75,11 +75,6 @@ class RootViewController: UITabBarController {
         item.imageInsets = UIEdgeInsetsMake(5.0, 0.0, -5.0, 0.0)
     }
     
-    override func awakeFromNib() {
-        
-    }
-    
-    
     /// 向viewController添加UINavigationController类型的父控制器, 并将它RightBarButtonItem设置为搜索按钮.
     ///
     /// - parameter viewController: 待设置的控制器

@@ -23,6 +23,10 @@
 		4D3B3B9F1D977C2700C55650 /* TweetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3B3B8B1D977C2700C55650 /* TweetTableViewController.swift */; };
 		4D3B3BA01D977C2700C55650 /* TitleTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3B3B911D977C2700C55650 /* TitleTabBar.swift */; };
 		4D3B3BA21D977C4000C55650 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3B3BA11D977C4000C55650 /* AppDelegate.swift */; };
+		4D7DB12C1D9784B000168786 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D7DB12B1D9784B000168786 /* Alamofire.framework */; };
+		4D7DB12E1D97858800168786 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4D7DB12B1D9784B000168786 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4D7DB1301D9786F700168786 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D7DB12F1D9786F700168786 /* SnapKit.framework */; };
+		4D7DB1311D97873B00168786 /* SnapKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4D7DB12F1D9786F700168786 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +45,20 @@
 			remoteInfo = iosAPP_Swift;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4D7DB12D1D97857C00168786 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4D7DB1311D97873B00168786 /* SnapKit.framework in CopyFiles */,
+				4D7DB12E1D97858800168786 /* Alamofire.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4D3B3B481D977BFB00C55650 /* iosAPP_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosAPP_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +83,8 @@
 		4D3B3B8B1D977C2700C55650 /* TweetTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetTableViewController.swift; sourceTree = "<group>"; };
 		4D3B3B911D977C2700C55650 /* TitleTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleTabBar.swift; sourceTree = "<group>"; };
 		4D3B3BA11D977C4000C55650 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4D7DB12B1D9784B000168786 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
+		4D7DB12F1D9786F700168786 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SnapKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +92,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D7DB12C1D9784B000168786 /* Alamofire.framework in Frameworks */,
+				4D7DB1301D9786F700168786 /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +250,8 @@
 		4D3B3B8F1D977C2700C55650 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				4D7DB12F1D9786F700168786 /* SnapKit.framework */,
+				4D7DB12B1D9784B000168786 /* Alamofire.framework */,
 			);
 			path = Vendor;
 			sourceTree = "<group>";
@@ -250,6 +274,7 @@
 				4D3B3B441D977BFB00C55650 /* Sources */,
 				4D3B3B451D977BFB00C55650 /* Frameworks */,
 				4D3B3B461D977BFB00C55650 /* Resources */,
+				4D7DB12D1D97857C00168786 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -532,6 +557,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 24LX7EU9GN;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iosAPP_Swift/Vendor",
+				);
 				INFOPLIST_FILE = iosAPP_Swift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -546,6 +575,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 24LX7EU9GN;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iosAPP_Swift/Vendor",
+				);
 				INFOPLIST_FILE = iosAPP_Swift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
