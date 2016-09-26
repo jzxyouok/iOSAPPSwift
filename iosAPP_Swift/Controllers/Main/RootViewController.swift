@@ -7,18 +7,23 @@
 //
 
 import UIKit
+//import Alamofire
 
-class RootViewController: UITabBarController {
+class RootViewController: UITabBarController,XMLParserDelegate {
+    
+    //MARK: - Properties
     
     private var addBtn: UITabBarItem?
     private var middleVC: UIViewController?
     
     public var previouslySelectedVC: UIViewController?
 
+    //MARK: - Methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //新闻, 博客, 问答, 活动
+        //资讯, 博客, 问答, 活动
         let newsSubVCNews = SubNewsTableViewController()
         let newsSubVCBlogs = SubBlogTableViewController()
         let newsSubVCQuestions = SubQuestionsTableViewController()
@@ -105,5 +110,20 @@ class RootViewController: UITabBarController {
         if item == self.addBtn {
             self.presentTweetEditNavVC()
         }
+    }
+    
+    //MARK: - XMLParser
+    
+    func parserDidStartDocument(_ parser: XMLParser) {
+        print("开始解析")
+    }
+    func parserDidEndDocument(_ parser: XMLParser) {
+        print("结束解析")
+    }
+    func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
+        
+    }
+    func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
+        
     }
 }

@@ -27,6 +27,9 @@
 		4D7DB12E1D97858800168786 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4D7DB12B1D9784B000168786 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4D7DB1301D9786F700168786 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D7DB12F1D9786F700168786 /* SnapKit.framework */; };
 		4D7DB1311D97873B00168786 /* SnapKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4D7DB12F1D9786F700168786 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4DE949751D9799820027B956 /* NewsObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE949741D9799820027B956 /* NewsObject.swift */; };
+		4DE949771D9799FB0027B956 /* NewsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE949761D9799FB0027B956 /* NewsType.swift */; };
+		4DE9497B1D97D83F0027B956 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE9497A1D97D83F0027B956 /* APIConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +88,9 @@
 		4D3B3BA11D977C4000C55650 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D7DB12B1D9784B000168786 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
 		4D7DB12F1D9786F700168786 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SnapKit.framework; sourceTree = "<group>"; };
+		4DE949741D9799820027B956 /* NewsObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsObject.swift; sourceTree = "<group>"; };
+		4DE949761D9799FB0027B956 /* NewsType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsType.swift; sourceTree = "<group>"; };
+		4DE9497A1D97D83F0027B956 /* APIConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				4D3B3BA11D977C4000C55650 /* AppDelegate.swift */,
+				4DE9497A1D97D83F0027B956 /* APIConstants.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -196,13 +203,13 @@
 		4D3B3B7B1D977C2700C55650 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4D3B3B801D977C2700C55650 /* NewsSubVC */,
 				4D3B3B7C1D977C2700C55650 /* DiscoverViewController.swift */,
 				4D3B3B7D1D977C2700C55650 /* HomePageViewController.swift */,
 				4D3B3B891D977C2700C55650 /* SwappableViewController.swift */,
 				4D3B3B8A1D977C2700C55650 /* TweetEditViewController.swift */,
 				4D3B3B8B1D977C2700C55650 /* TweetTableViewController.swift */,
 				4D3B3B7E1D977C2700C55650 /* Main */,
-				4D3B3B801D977C2700C55650 /* NewsSubVC */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -218,9 +225,9 @@
 		4D3B3B801D977C2700C55650 /* NewsSubVC */ = {
 			isa = PBXGroup;
 			children = (
+				4D3B3B831D977C2700C55650 /* SubNewsTableViewController.swift */,
 				4D3B3B811D977C2700C55650 /* SubActivitiesTableViewController.swift */,
 				4D3B3B821D977C2700C55650 /* SubBlogTableViewController.swift */,
-				4D3B3B831D977C2700C55650 /* SubNewsTableViewController.swift */,
 				4D3B3B841D977C2700C55650 /* SubQuestionsTableViewController.swift */,
 			);
 			path = NewsSubVC;
@@ -229,6 +236,8 @@
 		4D3B3B8C1D977C2700C55650 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4DE949741D9799820027B956 /* NewsObject.swift */,
+				4DE949761D9799FB0027B956 /* NewsType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -405,14 +414,17 @@
 				4D3B3B981D977C2700C55650 /* SubQuestionsTableViewController.swift in Sources */,
 				4D3B3BA01D977C2700C55650 /* TitleTabBar.swift in Sources */,
 				4D3B3B941D977C2700C55650 /* RootViewController.swift in Sources */,
+				4DE9497B1D97D83F0027B956 /* APIConstants.swift in Sources */,
 				4D3B3B9E1D977C2700C55650 /* TweetEditViewController.swift in Sources */,
 				4D3B3B971D977C2700C55650 /* SubNewsTableViewController.swift in Sources */,
+				4DE949771D9799FB0027B956 /* NewsType.swift in Sources */,
 				4D3B3BA21D977C4000C55650 /* AppDelegate.swift in Sources */,
 				4D3B3B931D977C2700C55650 /* HomePageViewController.swift in Sources */,
 				4D3B3B921D977C2700C55650 /* DiscoverViewController.swift in Sources */,
 				4D3B3B9F1D977C2700C55650 /* TweetTableViewController.swift in Sources */,
 				4D3B3B951D977C2700C55650 /* SubActivitiesTableViewController.swift in Sources */,
 				4D3B3B9D1D977C2700C55650 /* SwappableViewController.swift in Sources */,
+				4DE949751D9799820027B956 /* NewsObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

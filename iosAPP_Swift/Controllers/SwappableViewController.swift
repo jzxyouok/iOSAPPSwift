@@ -9,16 +9,19 @@
 import UIKit
 
 class SwappableViewController: UIViewController {
-    var titles: [String]?
+    var titles: [String]
     
-    convenience init(title: String?, subTitles: [String]?, subVCs: [UIViewController]?) {
+    convenience init(title: String, subTitles: [String], subVCs: [UIViewController]) {
         self.init(title: title, subTitles: subTitles, subVCs: subVCs, underTabBar: false)
     }
     
-    init(title: String?, subTitles: [String]?, subVCs: [UIViewController]?, underTabBar: Bool?) {
+    init(title: String?, subTitles: [String], subVCs: [UIViewController], underTabBar: Bool?) {
+        titles = subTitles
         super.init(nibName: nil, bundle: nil)
         self.title = title
-        titles = subTitles
+        for vc in subVCs {
+            self.addChildViewController(vc)
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -32,6 +35,8 @@ class SwappableViewController: UIViewController {
         let rect = CGRect(x: 0, y: 64, width: Int(self.view.bounds.size.width), height: 100)
         let titleTab = TitleTabBar(frame: rect, titles: titles)
         self.view.addSubview(titleTab)
-
+    }
+    
+    deinit {
     }
 }
