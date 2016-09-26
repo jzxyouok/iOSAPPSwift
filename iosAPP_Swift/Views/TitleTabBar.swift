@@ -26,7 +26,7 @@ class TitleTabBar: UITabBar {
         
         self.setItems(itemArray, animated: true)
         
-        for item in self.items! {
+        for item in self.items! {//设置字体及偏移
             let font = UIFont.boldSystemFont(ofSize: 15)
             let fontColor = UIColor.red
             let fontColorSelected = UIColor.blue
@@ -36,6 +36,6 @@ class TitleTabBar: UITabBar {
             item.setTitleTextAttributes(attributeDictSelected, for: .selected)
             item.titlePositionAdjustment = UIOffset(horizontal: 0.0, vertical: -15.0)
         }
-        self.selectedItem = self.items?[0]
+        self.selectedItem = self.items?[0]  //默认选中的标签
     }
 }
