@@ -9,36 +9,32 @@
 import UIKit
 
 class SubNewsTableViewController: UITableViewController {
-    
-
-
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let parser = TheXMLParser(url: NEWS_LIST)
-        print(parser)
+//        let parserObj = TheXMLParser(url: "http://www.oschina.net/action/api/news_list?show=week")
+        let parserObj = TheXMLParser(url: "http://www.oschina.net/action/api/news_list")
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 5
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+        let cell = UITableViewCell()
         // Configure the cell...
+        cell.textLabel?.text = "\(indexPath.row)"
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.

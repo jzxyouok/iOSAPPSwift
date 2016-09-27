@@ -9,7 +9,7 @@
 import UIKit
 
 class NewsType: NSObject {
-    var type: Int?
-    var authoruid2: Int?
+    var type: String?
+    var authoruID2: String?
     var eventurl: String?
 }

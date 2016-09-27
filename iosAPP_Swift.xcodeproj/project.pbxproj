@@ -24,6 +24,7 @@
 		4D3B3B9F1D977C2700C55650 /* TweetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3B3B8B1D977C2700C55650 /* TweetTableViewController.swift */; };
 		4D3B3BA01D977C2700C55650 /* TitleTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3B3B911D977C2700C55650 /* TitleTabBar.swift */; };
 		4D3B3BA21D977C4000C55650 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3B3BA11D977C4000C55650 /* AppDelegate.swift */; };
+		4D5AE59B1D9A6D8F00378BE5 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 4D5AE59A1D9A6D8F00378BE5 /* Cartfile */; };
 		4D7DB12C1D9784B000168786 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D7DB12B1D9784B000168786 /* Alamofire.framework */; };
 		4D7DB12E1D97858800168786 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4D7DB12B1D9784B000168786 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4D7DB1301D9786F700168786 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D7DB12F1D9786F700168786 /* SnapKit.framework */; };
@@ -88,6 +89,7 @@
 		4D3B3B8B1D977C2700C55650 /* TweetTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetTableViewController.swift; sourceTree = "<group>"; };
 		4D3B3B911D977C2700C55650 /* TitleTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleTabBar.swift; sourceTree = "<group>"; };
 		4D3B3BA11D977C4000C55650 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4D5AE59A1D9A6D8F00378BE5 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		4D7DB12B1D9784B000168786 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
 		4D7DB12F1D9786F700168786 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SnapKit.framework; sourceTree = "<group>"; };
 		4DE949741D9799820027B956 /* NewsObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsObject.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 		4D3B3B3F1D977BFB00C55650 = {
 			isa = PBXGroup;
 			children = (
+				4D5AE59A1D9A6D8F00378BE5 /* Cartfile */,
 				4D3B3B4A1D977BFB00C55650 /* iosAPP_Swift */,
 				4D3B3B5F1D977BFB00C55650 /* iosAPP_SwiftTests */,
 				4D3B3B6A1D977BFB00C55650 /* iosAPP_SwiftUITests */,
@@ -206,11 +209,11 @@
 			isa = PBXGroup;
 			children = (
 				4D3B3B801D977C2700C55650 /* NewsSubVC */,
+				4D3B3B891D977C2700C55650 /* SwappableViewController.swift */,
+				4D3B3B8B1D977C2700C55650 /* TweetTableViewController.swift */,
+				4D3B3B8A1D977C2700C55650 /* TweetEditViewController.swift */,
 				4D3B3B7C1D977C2700C55650 /* DiscoverViewController.swift */,
 				4D3B3B7D1D977C2700C55650 /* HomePageViewController.swift */,
-				4D3B3B891D977C2700C55650 /* SwappableViewController.swift */,
-				4D3B3B8A1D977C2700C55650 /* TweetEditViewController.swift */,
-				4D3B3B8B1D977C2700C55650 /* TweetTableViewController.swift */,
 				4D3B3B7E1D977C2700C55650 /* Main */,
 			);
 			path = Controllers;
@@ -387,6 +390,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D5AE59B1D9A6D8F00378BE5 /* Cartfile in Resources */,
 				4D3B3B561D977BFB00C55650 /* LaunchScreen.storyboard in Resources */,
 				4D3B3B531D977BFB00C55650 /* Assets.xcassets in Resources */,
 			);
