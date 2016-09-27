@@ -17,6 +17,8 @@ class TheXMLParser: NSObject, XMLParserDelegate{
     
     init(url: String) {
         super.init()
+        let notif = Notification(name: Notification.Name.init("START_RETRIVE_NEWS_LIST"))
+        NotificationCenter.default.post(notif)
         Alamofire.request(url).response { (response) in
             let parser = XMLParser(data: response.data!)
             parser.delegate = self
@@ -37,6 +39,8 @@ class TheXMLParser: NSObject, XMLParserDelegate{
                     print(item)
                 }
                 parser.abortParsing()   //遇到newslist的元素结束标志, 不用再继续解析了
+                let notif = Notification(name: Notification.Name.init("END_RETRIVE_NEWS_LIST"))
+                NotificationCenter.default.post(notif)
             }
         case "news":
             newsArray.append(newsItem!)

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D0849741D9A70BA00AEB08F /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0849731D9A70BA00AEB08F /* MBProgressHUD.framework */; };
+		4D0849751D9A70E100AEB08F /* MBProgressHUD.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4D0849731D9A70BA00AEB08F /* MBProgressHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4D3545451D9A07DD008C466C /* TheXMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3545441D9A07DD008C466C /* TheXMLParser.swift */; };
 		4D3B3B531D977BFB00C55650 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D3B3B521D977BFB00C55650 /* Assets.xcassets */; };
 		4D3B3B561D977BFB00C55650 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D3B3B541D977BFB00C55650 /* LaunchScreen.storyboard */; };
@@ -58,6 +60,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				4D0849751D9A70E100AEB08F /* MBProgressHUD.framework in CopyFiles */,
 				4D7DB1311D97873B00168786 /* SnapKit.framework in CopyFiles */,
 				4D7DB12E1D97858800168786 /* Alamofire.framework in CopyFiles */,
 			);
@@ -66,6 +69,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4D0849731D9A70BA00AEB08F /* MBProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MBProgressHUD.framework; sourceTree = "<group>"; };
 		4D3545441D9A07DD008C466C /* TheXMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheXMLParser.swift; sourceTree = "<group>"; };
 		4D3B3B481D977BFB00C55650 /* iosAPP_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosAPP_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D3B3B521D977BFB00C55650 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 			files = (
 				4D7DB12C1D9784B000168786 /* Alamofire.framework in Frameworks */,
 				4D7DB1301D9786F700168786 /* SnapKit.framework in Frameworks */,
+				4D0849741D9A70BA00AEB08F /* MBProgressHUD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,10 +167,10 @@
 				4D3B3B7A1D977C2700C55650 /* Categories */,
 				4D3B3B7B1D977C2700C55650 /* Controllers */,
 				4D3B3B8C1D977C2700C55650 /* Models */,
-				4D3B3B8D1D977C2700C55650 /* Resources */,
-				4D3B3B8E1D977C2700C55650 /* Utils */,
-				4D3B3B8F1D977C2700C55650 /* Vendor */,
 				4D3B3B901D977C2700C55650 /* Views */,
+				4D3B3B8F1D977C2700C55650 /* Vendor */,
+				4D3B3B8E1D977C2700C55650 /* Utils */,
+				4D3B3B8D1D977C2700C55650 /* Resources */,
 				4D2488431D9781DF00A9BFD6 /* Supporting Files */,
 			);
 			path = iosAPP_Swift;
@@ -265,6 +270,7 @@
 		4D3B3B8F1D977C2700C55650 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				4D0849731D9A70BA00AEB08F /* MBProgressHUD.framework */,
 				4D7DB12F1D9786F700168786 /* SnapKit.framework */,
 				4D7DB12B1D9784B000168786 /* Alamofire.framework */,
 			);
