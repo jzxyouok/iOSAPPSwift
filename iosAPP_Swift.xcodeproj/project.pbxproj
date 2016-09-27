@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D3545451D9A07DD008C466C /* TheXMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3545441D9A07DD008C466C /* TheXMLParser.swift */; };
 		4D3B3B531D977BFB00C55650 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D3B3B521D977BFB00C55650 /* Assets.xcassets */; };
 		4D3B3B561D977BFB00C55650 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D3B3B541D977BFB00C55650 /* LaunchScreen.storyboard */; };
 		4D3B3B611D977BFB00C55650 /* iosAPP_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3B3B601D977BFB00C55650 /* iosAPP_SwiftTests.swift */; };
@@ -64,6 +65,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4D3545441D9A07DD008C466C /* TheXMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheXMLParser.swift; sourceTree = "<group>"; };
 		4D3B3B481D977BFB00C55650 /* iosAPP_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosAPP_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D3B3B521D977BFB00C55650 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D3B3B551D977BFB00C55650 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 		4D3B3B8C1D977C2700C55650 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4D3545441D9A07DD008C466C /* TheXMLParser.swift */,
 				4DE949741D9799820027B956 /* NewsObject.swift */,
 				4DE949761D9799FB0027B956 /* NewsType.swift */,
 			);
@@ -422,6 +425,7 @@
 				4D3B3B931D977C2700C55650 /* HomePageViewController.swift in Sources */,
 				4D3B3B921D977C2700C55650 /* DiscoverViewController.swift in Sources */,
 				4D3B3B9F1D977C2700C55650 /* TweetTableViewController.swift in Sources */,
+				4D3545451D9A07DD008C466C /* TheXMLParser.swift in Sources */,
 				4D3B3B951D977C2700C55650 /* SubActivitiesTableViewController.swift in Sources */,
 				4D3B3B9D1D977C2700C55650 /* SwappableViewController.swift in Sources */,
 				4DE949751D9799820027B956 /* NewsObject.swift in Sources */,

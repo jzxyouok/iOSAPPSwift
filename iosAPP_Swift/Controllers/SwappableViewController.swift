@@ -15,7 +15,8 @@ class SwappableViewController: UIViewController, UIScrollViewDelegate, UITabBarD
     
     var titles: [String]
     var subVCs: [UIViewController]
-    
+    var scrollView: UIScrollView?
+    var titleBar: UITabBar?
     //MARK: - Initializers
     
     convenience init(title: String, subTitles: [String], subVCs: [UIViewController]) {
@@ -42,35 +43,53 @@ class SwappableViewController: UIViewController, UIScrollViewDelegate, UITabBarD
         self.navigationController?.view.addSubview(self.view)
         let rootViewWidth = self.view.bounds.size.width
         //--顶部标题栏--
-        let titleBar = TitleTabBar(frame: CGRect(), titles: self.titles)
-        titleBar.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(titleBar)
-        titleBar.snp.makeConstraints { (make) in
+        titleBar = TitleTabBar(frame: CGRect(), titles: self.titles)
+        titleBar!.delegate = self
+        titleBar!.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(titleBar!)
+        titleBar!.snp.makeConstraints { (make) in
             make.top.equalTo(self.view)
             make.left.equalTo(self.view)
             make.width.equalTo(self.view)
             make.height.equalTo(44.0)
         }
         //--内容视图容器--
-        let scrollView = UIScrollView(frame: self.view.frame)
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(scrollView)
-        scrollView.snp.makeConstraints { (make) in
-            make.top.equalTo(titleBar.snp.bottom)
+        scrollView = UIScrollView(frame: self.view.frame)
+        scrollView!.translatesAutoresizingMaskIntoConstraints = false
+        scrollView?.isPagingEnabled = true
+        scrollView?.showsHorizontalScrollIndicator = false
+        scrollView?.delegate = self
+        self.view.addSubview(scrollView!)
+        scrollView!.snp.makeConstraints { (make) in
+            make.top.equalTo(titleBar!.snp.bottom)
             make.bottom.equalTo(self.view)
             make.left.equalTo(self.view)
             make.right.equalTo(self.view)
         }
-        scrollView.backgroundColor = UIColor.red        //演示
+//        scrollView!.backgroundColor = UIColor.red        //演示
         let scrollViewContentWidth = rootViewWidth * CGFloat(self.subVCs.count)
-        scrollView.contentSize = CGSize(width: scrollViewContentWidth, height: 0)
+        scrollView!.contentSize = CGSize(width: scrollViewContentWidth, height: 0)
         //--4个子控制器视图放入容器--
         for (n,vc) in self.subVCs.enumerated() {
-            vc.view.frame = CGRect(x: CGFloat(n) * rootViewWidth, y: 0, width: rootViewWidth, height: scrollView.bounds.size.height)
-            scrollView.addSubview(vc.view)
+            vc.view.frame = CGRect(x: CGFloat(n) * rootViewWidth, y: 0, width: rootViewWidth, height: scrollView!.bounds.size.height)
+            scrollView!.addSubview(vc.view)
         }
-        
     }
+    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        moveWithItemTag(tag: item.tag, scrollView: self.scrollView!)
+        print(tabBar.items)
+    }
+    func moveWithItemTag(tag: Int, scrollView: UIScrollView) {
+        let x = CGFloat(tag) * scrollView.bounds.size.width
+        let point = CGPoint(x: x, y: 0)
+        scrollView.setContentOffset(point, animated: false)
+    }
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        let point = targetContentOffset.pointee
+        let tag = Int(point.x / scrollView.bounds.size.width)
+        self.titleBar?.selectedItem = titleBar?.items![tag]
+    }
+
 }
 
 
