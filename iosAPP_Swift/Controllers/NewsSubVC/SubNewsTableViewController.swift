@@ -10,11 +10,12 @@ import UIKit
 import MBProgressHUD
 
 class SubNewsTableViewController: UITableViewController {
-    
     var hudView: MBProgressHUD? //一朵菊花在这播种, 怎么开不起来...
-    
+    var newsList: [NewsObject] = [NewsObject]()
     override func viewDidLoad() {
         super.viewDidLoad()
+        let nib = UINib(nibName: "NewsListcell", bundle: nil)
+        self.tableView.register(nib, forCellReuseIdentifier: "NewsListCell")
         NotificationCenter.default.addObserver(self, selector: #selector(self.retriveNetworkDataWith(notification:)), name: NSNotification.Name(rawValue: "START_RETRIVE_NEWS_LIST"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.retriveNetworkDataWith(notification:)), name: NSNotification.Name(rawValue: "END_RETRIVE_NEWS_LIST"), object: nil)
         let parser = TheXMLParser(url: NEWS_LIST)
@@ -23,7 +24,8 @@ class SubNewsTableViewController: UITableViewController {
     
     func retriveNetworkDataWith(notification notif: Notification) {
         if notif.name.rawValue == "END_RETRIVE_NEWS_LIST" {
-            print(notif)
+            self.newsList = notif.userInfo?["NewsList"]! as! [NewsObject]
+            self.tableView.reloadData()
         }
     }
     
@@ -36,14 +38,15 @@ class SubNewsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 5
+        return self.newsList.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "NewsListCell") as! NewsTableViewCell
         // Configure the cell...
-        cell.textLabel?.text = "\(indexPath.row)"
-        
+        if self.newsList.count > 0 {
+            cell.textLabel?.text = self.newsList[indexPath.row].author
+        }
         return cell
     }
     

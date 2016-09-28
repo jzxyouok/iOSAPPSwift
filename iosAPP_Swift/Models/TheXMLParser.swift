@@ -11,7 +11,7 @@ import Alamofire
 
 class TheXMLParser: NSObject, XMLParserDelegate{
     
-    var newsArray: [NewsObject] = [NewsObject]()
+    private var newsArray: [NewsObject] = [NewsObject]()
     private var entry: String = ""
     private var newsItem: NewsObject?
     
@@ -35,11 +35,8 @@ class TheXMLParser: NSObject, XMLParserDelegate{
         switch elementName{
         case "newslist":
             if newsArray.count > 0 {
-                for item in newsArray {
-                    print(item)
-                }
                 parser.abortParsing()   //遇到newslist的元素结束标志, 不用再继续解析了
-                let notif = Notification(name: Notification.Name.init("END_RETRIVE_NEWS_LIST"))
+                let notif = Notification(name: Notification.Name.init("END_RETRIVE_NEWS_LIST"), object: self, userInfo: ["NewsList" : self.newsArray])
                 NotificationCenter.default.post(notif)
             }
         case "news":
