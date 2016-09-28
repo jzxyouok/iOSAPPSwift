@@ -73,6 +73,7 @@ class SwappableViewController: UIViewController, UIScrollViewDelegate, UITabBarD
         for (n,vc) in self.subVCs.enumerated() {
             vc.view.frame = CGRect(x: CGFloat(n) * rootViewWidth, y: 0, width: rootViewWidth, height: scrollView!.bounds.size.height)
             scrollView!.addSubview(vc.view)
+            self.addChildViewController(vc)
         }
     }
     func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {

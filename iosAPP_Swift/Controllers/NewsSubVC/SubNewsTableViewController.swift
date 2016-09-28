@@ -45,9 +45,16 @@ class SubNewsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NewsListCell") as! NewsTableViewCell
         // Configure the cell...
         if self.newsList.count > 0 {
-            cell.textLabel?.text = self.newsList[indexPath.row].author
+            cell.textLabel?.text = self.newsList[indexPath.row].title
         }
         return cell
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let newsID = self.newsList[indexPath.row].id!
+        print(newsID)
+        let detailVC = NewsDetailViewController()
+        detailVC.newsID = newsID
+        self.navigationController?.pushViewController(detailVC, animated: true)
     }
     
     /*

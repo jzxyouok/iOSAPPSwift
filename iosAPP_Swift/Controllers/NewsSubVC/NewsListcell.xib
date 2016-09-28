@@ -13,26 +13,7 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6IC-e2-bab" id="0qb-J7-MOI">
                 <frame key="frameInset" width="439" height="168"/>
                 <autoresizingMask key="autoresizingMask"/>
-                <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATs-nn-FcK">
-                        <color key="backgroundColor" red="1" green="0.26722105881405001" blue="0.32126230145606982" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="42" id="Esv-Qo-19a"/>
-                            <constraint firstAttribute="height" constant="40" id="XhG-Xv-gX2"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                </subviews>
-                <constraints>
-                    <constraint firstItem="ATs-nn-FcK" firstAttribute="centerX" secondItem="0qb-J7-MOI" secondAttribute="centerX" id="gEL-0U-Vmx"/>
-                    <constraint firstItem="ATs-nn-FcK" firstAttribute="centerY" secondItem="0qb-J7-MOI" secondAttribute="centerY" id="kkN-3V-b0z"/>
-                </constraints>
             </tableViewCellContentView>
-            <connections>
-                <outlet property="label1" destination="ATs-nn-FcK" id="Msd-Tf-QK5"/>
-            </connections>
             <point key="canvasLocation" x="-291" y="-32"/>
         </tableViewCell>
     </objects>

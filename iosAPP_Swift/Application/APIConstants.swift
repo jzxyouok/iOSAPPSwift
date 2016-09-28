@@ -8,5 +8,6 @@
 
 import Foundation
 
-let BASE_REQUEST_ADDRESS = "http://www.oschina.net/"
-let NEWS_LIST = BASE_REQUEST_ADDRESS + "action/api/news_list"
+let BASE_REQUEST_ADDRESS = "http://www.oschina.net/action/api"
+let NEWS_LIST = BASE_REQUEST_ADDRESS + "/news_list"
+let NEWS_DETAIL = BASE_REQUEST_ADDRESS + "/news_detail"
