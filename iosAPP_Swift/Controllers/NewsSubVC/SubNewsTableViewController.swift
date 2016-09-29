@@ -16,15 +16,16 @@ class SubNewsTableViewController: UITableViewController {
         super.viewDidLoad()
         let nib = UINib(nibName: "NewsListcell", bundle: nil)
         self.tableView.register(nib, forCellReuseIdentifier: "NewsListCell")
-        NotificationCenter.default.addObserver(self, selector: #selector(self.retriveNetworkDataWith(notification:)), name: NSNotification.Name(rawValue: "START_RETRIVE_NEWS_LIST"), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.retriveNetworkDataWith(notification:)), name: NSNotification.Name(rawValue: "END_RETRIVE_NEWS_LIST"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.retriveNetworkDataWith(notification:)), name: NOTIFICATION_NEWS_ARRIVE, object: nil)
         let parser = TheXMLParser(url: NEWS_LIST)
         print(parser)
     }
     
     func retriveNetworkDataWith(notification notif: Notification) {
         if notif.name.rawValue == "END_RETRIVE_NEWS_LIST" {
-            self.newsList = notif.userInfo?["NewsList"]! as! [NewsObject]
+            
+            self.newsList = notif.userInfo?[NOTIFICATION_USERINFO_NEWS]! as! [NewsObject]
+
             self.tableView.reloadData()
         }
     }

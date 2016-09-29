@@ -33,7 +33,6 @@
 		4D7DB12E1D97858800168786 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4D7DB12B1D9784B000168786 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4D7DB1301D9786F700168786 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D7DB12F1D9786F700168786 /* SnapKit.framework */; };
 		4D7DB1311D97873B00168786 /* SnapKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4D7DB12F1D9786F700168786 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		4DA38D341D9CA87300ED333A /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 4DA38D331D9CA87300ED333A /* README.md */; };
 		4DB674E91D9BC20700C717B0 /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB674E81D9BC20700C717B0 /* NewsDetailViewController.swift */; };
 		4DE949751D9799820027B956 /* NewsObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE949741D9799820027B956 /* NewsObject.swift */; };
 		4DE949771D9799FB0027B956 /* NewsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE949761D9799FB0027B956 /* NewsType.swift */; };
@@ -184,9 +183,9 @@
 			children = (
 				4D3B3B791D977C2700C55650 /* Application */,
 				4D3B3B7A1D977C2700C55650 /* Categories */,
+				4D3B3B901D977C2700C55650 /* Views */,
 				4D3B3B7B1D977C2700C55650 /* Controllers */,
 				4D3B3B8C1D977C2700C55650 /* Models */,
-				4D3B3B901D977C2700C55650 /* Views */,
 				4D3B3B8F1D977C2700C55650 /* Vendor */,
 				4D3B3B8E1D977C2700C55650 /* Utils */,
 				4D3B3B8D1D977C2700C55650 /* Resources */,
@@ -457,7 +456,6 @@
 				4D3B3B931D977C2700C55650 /* HomePageViewController.swift in Sources */,
 				4D3B3B921D977C2700C55650 /* DiscoverViewController.swift in Sources */,
 				4D3B3B9F1D977C2700C55650 /* TweetTableViewController.swift in Sources */,
-				4DA38D341D9CA87300ED333A /* README.md in Sources */,
 				4D3545451D9A07DD008C466C /* TheXMLParser.swift in Sources */,
 				4D3B3B951D977C2700C55650 /* SubActivitiesTableViewController.swift in Sources */,
 				4D0FF13E1D9B52EA009FC18B /* NewsTableViewCell.swift in Sources */,

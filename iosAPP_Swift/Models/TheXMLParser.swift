@@ -9,17 +9,27 @@
 import UIKit
 import Alamofire
 
+public enum RequstType {
+    case NewsList, NewsDetail
+}
+
 class TheXMLParser: NSObject, XMLParserDelegate{
     
     private var newsArray: [NewsObject] = [NewsObject]()
     private var entry: String = ""
     private var newsItem: NewsObject?
+    var requstType: RequstType?
     
-    init(url: String) {
+    convenience init(url: String) {
+        self.init(url: url, parameters: nil, requestType: nil)
+    }
+    
+    init(url: String, parameters: Parameters?, requestType: RequstType?) {
         super.init()
+        self.requstType = requestType
         let notif = Notification(name: Notification.Name.init("START_RETRIVE_NEWS_LIST"))
         NotificationCenter.default.post(notif)
-        Alamofire.request(url).response { (response) in
+        Alamofire.request(url, parameters: parameters).response { (response) in
             let parser = XMLParser(data: response.data!)
             parser.delegate = self
             self.newsItem = NewsObject()
@@ -36,7 +46,7 @@ class TheXMLParser: NSObject, XMLParserDelegate{
         case "newslist":
             if newsArray.count > 0 {
                 parser.abortParsing()   //遇到newslist的元素结束标志, 不用再继续解析了
-                let notif = Notification(name: Notification.Name.init("END_RETRIVE_NEWS_LIST"), object: self, userInfo: ["NewsList" : self.newsArray])
+                let notif = Notification(name: NOTIFICATION_NEWS_ARRIVE, object: self, userInfo: [NOTIFICATION_USERINFO_NEWS : self.newsArray])
                 NotificationCenter.default.post(notif)
             }
         case "news":
@@ -44,6 +54,11 @@ class TheXMLParser: NSObject, XMLParserDelegate{
             newsItem = NewsObject()
         default:
             break
+        }
+        if (self.requstType == RequstType.NewsDetail) && elementName == "news" {
+            parser.abortParsing() 
+            let notif = Notification(name: NOTIFICATION_NEWS_DETAIL, object: self, userInfo: [NOTIFICATION_USERINFO_NEWS : self.newsArray])
+            NotificationCenter.default.post(notif)
         }
     }
     
