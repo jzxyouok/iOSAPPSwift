@@ -254,9 +254,9 @@
 			isa = PBXGroup;
 			children = (
 				4D3B3B831D977C2700C55650 /* SubNewsTableViewController.swift */,
-				4D3B3B811D977C2700C55650 /* SubActivitiesTableViewController.swift */,
 				4D3B3B821D977C2700C55650 /* SubBlogTableViewController.swift */,
 				4D3B3B841D977C2700C55650 /* SubQuestionsTableViewController.swift */,
+				4D3B3B811D977C2700C55650 /* SubActivitiesTableViewController.swift */,
 				4D0FF13F1D9B52F3009FC18B /* Components */,
 			);
 			path = NewsSubVC;
