@@ -14,7 +14,6 @@ class DiscoverViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.clear
         self.title = "发现"
-        // Do any additional setup after loading the view.
     }
 
 }

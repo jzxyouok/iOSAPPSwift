@@ -19,7 +19,7 @@ class NewsObject: NSObject {
     var url: String?
     var newstype: NewsType?
     
-    override var description: String {
+    override var description: String {//描述信息覆盖
         return "===============\n\(id!)\n\(title!)\n\(body!)\n\(commentCount!)\n\(author!)\n\(authorID!)\n\(pubDate!)\n\(url!)===============\n"
     }
 }

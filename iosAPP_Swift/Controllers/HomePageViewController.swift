@@ -14,7 +14,6 @@ class HomePageViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.clear
         self.title = "我的"
-        // Do any additional setup after loading the view.
     }
 
 }

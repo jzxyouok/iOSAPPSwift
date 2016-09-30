@@ -51,7 +51,7 @@ class RootViewController: UITabBarController,XMLParserDelegate {
         let discoverNavVC = UINavigationController(rootViewController: discoverVC)
         let homepageNavVC = UINavigationController(rootViewController: homepageVC)
         
-        self.viewControllers = [newsNavVC, tweetsNavVC, middleVC!, discoverNavVC, homepageNavVC]
+        self.viewControllers = [newsNavVC, tweetsNavVC, middleVC!, discoverNavVC, homepageNavVC]    // tabbar的子控制器
 
         let titleArray = ["综合", "动弹", "", "发现", "我的"]
         let images = ["tabbar-news", "tabbar-tweet", "ic_nav_add", "tabbar-discover", "tabbar-me"]
