@@ -11,9 +11,9 @@ import UIKit
 class NewsTableViewCell: UITableViewCell {
 
 
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var authorLabel: UILabel!
-    @IBOutlet weak var detailLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!     //标题
+    @IBOutlet weak var authorLabel: UILabel!    //作者
+    @IBOutlet weak var detailLabel: UILabel!    //详情
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -9,14 +9,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="NewsListCell" rowHeight="173" id="6IC-e2-bab" customClass="NewsTableViewCell" customModule="iosAPP_Swift" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="439" height="173"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="NewsListCell" rowHeight="146" id="6IC-e2-bab" customClass="NewsTableViewCell" customModule="iosAPP_Swift" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="439" height="146"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6IC-e2-bab" id="0qb-J7-MOI">
-                <frame key="frameInset" width="439" height="172"/>
+                <frame key="frameInset" width="439" height="146"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ug-CV-XG1">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ug-CV-XG1">
                         <color key="backgroundColor" red="0.90426700000000004" green="0.82948512628484417" blue="0.2029272963495222" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="44" id="MaO-47-Ius"/>
@@ -46,7 +46,7 @@
                     <constraint firstItem="2Ug-CV-XG1" firstAttribute="leading" secondItem="0qb-J7-MOI" secondAttribute="leadingMargin" id="VLD-xx-wNd"/>
                     <constraint firstItem="27L-gc-pnr" firstAttribute="leading" secondItem="pc1-3K-whj" secondAttribute="trailing" constant="8" id="WCF-Hf-iep"/>
                     <constraint firstItem="pc1-3K-whj" firstAttribute="top" secondItem="2Ug-CV-XG1" secondAttribute="bottom" constant="8" id="hsv-dt-h52"/>
-                    <constraint firstItem="27L-gc-pnr" firstAttribute="top" secondItem="2Ug-CV-XG1" secondAttribute="bottom" constant="61" id="kVJ-Wa-PJ8"/>
+                    <constraint firstItem="27L-gc-pnr" firstAttribute="top" secondItem="2Ug-CV-XG1" secondAttribute="bottom" constant="10" id="kVJ-Wa-PJ8"/>
                     <constraint firstItem="2Ug-CV-XG1" firstAttribute="top" secondItem="0qb-J7-MOI" secondAttribute="topMargin" id="ond-iZ-LwM"/>
                     <constraint firstItem="pc1-3K-whj" firstAttribute="width" secondItem="0qb-J7-MOI" secondAttribute="height" multiplier="327:172" id="wXJ-Cp-0QP"/>
                     <constraint firstItem="27L-gc-pnr" firstAttribute="bottom" secondItem="0qb-J7-MOI" secondAttribute="bottomMargin" id="xpB-EH-0zA"/>
@@ -57,7 +57,7 @@
                 <outlet property="detailLabel" destination="pc1-3K-whj" id="x5a-3u-eSK"/>
                 <outlet property="titleLabel" destination="2Ug-CV-XG1" id="4b1-HU-KfO"/>
             </connections>
-            <point key="canvasLocation" x="-914.5" y="-68.5"/>
+            <point key="canvasLocation" x="-914.5" y="-82"/>
         </tableViewCell>
     </objects>
 </document>
