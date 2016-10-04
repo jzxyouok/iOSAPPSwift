@@ -4,7 +4,7 @@
 //
 //  Created by raymond on 9/27/16.
 //  Copyright © 2016 raymond. All rights reserved.
-//
+//  用于解析xml.
 
 import UIKit
 import Alamofire

@@ -4,7 +4,7 @@
 //
 //  Created by raymond on 9/28/16.
 //  Copyright © 2016 raymond. All rights reserved.
-//
+//  综合 - 资讯 - 界面自定义cell
 
 import UIKit
 

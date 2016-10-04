@@ -4,7 +4,7 @@
 //
 //  Created by raymond on 9/21/16.
 //  Copyright © 2016 raymond. All rights reserved.
-//我的动态, 用于加号按钮
+//我的动态界面控制器, 用于加号按钮
 
 import UIKit
 

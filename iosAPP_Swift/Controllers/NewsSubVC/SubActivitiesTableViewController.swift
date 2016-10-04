@@ -4,7 +4,7 @@
 //
 //  Created by raymond on 9/21/16.
 //  Copyright © 2016 raymond. All rights reserved.
-//
+//  综合 - 活动
 
 import UIKit
 
