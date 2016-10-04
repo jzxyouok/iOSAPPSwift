@@ -11,14 +11,14 @@ import UIKit
 class NewsTableViewCell: UITableViewCell {
 
 
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var authorLabel: UILabel!
+    @IBOutlet weak var detailLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        titleLabel.backgroundColor = UIColor.white
+        authorLabel.backgroundColor = UIColor.white
+        detailLabel.backgroundColor = UIColor.white
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }

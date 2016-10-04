@@ -19,6 +19,8 @@ class SubNewsTableViewController: UITableViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(self.retriveNetworkDataWith(notification:)), name: NOTIFICATION_NEWS_ARRIVE, object: nil)
         let parser = TheXMLParser(url: NEWS_LIST)
         print(parser)
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedRowHeight = 44
     }
     
     func retriveNetworkDataWith(notification notif: Notification) {
@@ -43,11 +45,15 @@ class SubNewsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NewsListCell") as! NewsTableViewCell
         if self.newsList.count > 0 {
-            cell.textLabel?.text = self.newsList[indexPath.row].title
+            //设置显示文字
+            let newsObj = self.newsList[indexPath.row]
+            cell.titleLabel.text = newsObj.title
+            cell.authorLabel.text = newsObj.author
+            cell.detailLabel.text = newsObj.body
         }
         return cell
     }
-    
+   
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let newsID = self.newsList[indexPath.row].id!
         print(newsID)
