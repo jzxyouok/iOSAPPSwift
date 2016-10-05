@@ -5,6 +5,7 @@
 //  Created by raymond on 9/27/16.
 //  Copyright © 2016 raymond. All rights reserved.
 //  用于解析xml.
+//  2016.10.05 准备尝试重构解析器, 使得其可以根据模型的情况对应解析数据.
 
 import UIKit
 import Alamofire

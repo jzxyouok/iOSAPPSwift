@@ -6,7 +6,7 @@
 //  Copyright © 2016 raymond. All rights reserved.
 //  点击 综合 - 资讯 - cell 显示的新闻详细界面
 
-//这个页面准备先用webView来做, 获取url后直接展示.
+//这个页面先用webView来做, 获取url后直接展示.
 
 import UIKit
 import Alamofire
