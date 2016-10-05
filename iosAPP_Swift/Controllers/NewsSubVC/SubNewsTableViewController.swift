@@ -4,7 +4,7 @@
 //
 //  Created by raymond on 9/21/16.
 //  Copyright © 2016 raymond. All rights reserved.
-// 综合 - 资讯
+// 综合 - 资讯, 上拉刷新使用的是系统的refresh, 下拉则是加载数据之后使用tableView的reloadData即可.
 
 import UIKit
 import MBProgressHUD
@@ -14,13 +14,26 @@ class SubNewsTableViewController: UITableViewController {
     var newsList: [NewsObject] = [NewsObject]()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let nib = UINib(nibName: "NewsListcell", bundle: nil)
         self.tableView.register(nib, forCellReuseIdentifier: "NewsListCell")
-        NotificationCenter.default.addObserver(self, selector: #selector(self.retriveNetworkDataWith(notification:)), name: NOTIFICATION_NEWS_ARRIVE, object: nil)
-        let parser = TheXMLParser(url: NEWS_LIST)
-        print(parser)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.retriveNetworkDataWith(notification:)), name: NOTIFICATION_NEWS_ARRIVE, object: nil)  //网络数据获取通知
+        
+        _ = TheXMLParser(url: NEWS_LIST)
+        
+        //估计高度
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 44
+        
+        self.refreshControl = UIRefreshControl()    //刷新, 专门为TableViewConroller设计....
+        self.refreshControl?.addTarget(self, action: #selector(self.setRefresh(control:)), for: .valueChanged)
+    }
+    
+    func setRefresh(control: UIRefreshControl) {
+        control.beginRefreshing()
+        print("hello")
+        control.endRefreshing()
     }
     
     func retriveNetworkDataWith(notification notif: Notification) {
