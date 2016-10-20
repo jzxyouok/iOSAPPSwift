@@ -24,5 +24,13 @@ class SubQuestionsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 0
     }
-
+    
+    init() {
+        super.init(style: .grouped)
+        //TODO: 初始化
+    }
+    required init?(coder aDecoder: NSCoder) {
+        //FIXME: 待修改
+        fatalError("")
+    }
 }

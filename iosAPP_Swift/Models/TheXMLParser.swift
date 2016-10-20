@@ -20,6 +20,9 @@ class TheXMLParser: NSObject, XMLParserDelegate{
     private var entry: String = ""
     private var newsItem: NewsObject?
     var requstType: RequstType?
+    private var keys: [[String : Bool]] = [[String : Bool]]()
+    
+    private var values: [String] = [String]()
     
     convenience init(url: String) {
         self.init(url: url, parameters: nil, requestType: nil)
@@ -39,6 +42,7 @@ class TheXMLParser: NSObject, XMLParserDelegate{
     }
     
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
+        self.keys.append([elementName : false])
         entry = elementName
     }
     
@@ -49,14 +53,16 @@ class TheXMLParser: NSObject, XMLParserDelegate{
                 parser.abortParsing()   //遇到newslist的元素结束标志, 不用再继续解析了
                 let notif = Notification(name: NOTIFICATION_NEWS_ARRIVE, object: self, userInfo: [NOTIFICATION_USERINFO_NEWS : self.newsArray])
                 NotificationCenter.default.post(notif)
-            }
+                //这里测试
+                print(self.keys)
+            }//if
         case "news":
             newsArray.append(newsItem!)
             newsItem = NewsObject()
         default:
             break
         }
-        if (self.requstType == RequstType.NewsDetail) && elementName == "news" {
+        if (self.requstType == RequstType.NewsDetail) && elementName == "news" {    //获取新闻详细的时候得到的数据.
             parser.abortParsing() 
             let notif = Notification(name: NOTIFICATION_NEWS_DETAIL, object: self, userInfo: [NOTIFICATION_USERINFO_NEWS : self.newsArray])
             NotificationCenter.default.post(notif)
@@ -64,6 +70,9 @@ class TheXMLParser: NSObject, XMLParserDelegate{
     }
     
     func parser(_ parser: XMLParser, foundCharacters string: String) {
+        
+        self.values.append(string)
+        
         switch entry {
         case "id":
             newsItem?.id = string
